@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito sans', sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+
+body {
+    background: #E5E5E5;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+
+    width: 100%;
+    height: 36.8rem;
+
+    background: rgb(105, 18, 244);
+    background: linear-gradient(0deg, rgba(96,34,195,1) 0%, rgba(45,192,253,1) 100%); 
+    
+
+    top:0;
+    left: 0;
+    z-index: -1;
+}
+
+.page {
+    width: 73.6rem;
+    margin: auto;
+}
+
+header {
+    margin-top: 7.4rem;
+    width: 31.9rem;
+}
+
+
+header h1 {
+    font-size: 4rem;
+    line-height: 3rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1.5rem;
+}
+
+header p {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    color: rgb(255, 255, 255);
+}
+
+form {
+    margin-top: 3.8rem;
+    min-height: 36rem;
+    background: whitesmoke;
+
+    border-radius: 8px 8px 0 0;
+
+    padding: 6.4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+}
+
+fieldset {
+    border: none;
+}
+
+.fieldset-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+fieldset legend {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+
+    
+    border-bottom: 0.1rem solid #E6E6F0;
+    padding-bottom: 1.6rem;
+    width: 100%;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-wrapper label {
+    font-weight: 400;
+    font-size:1.7rem;
+    line-height: 2.4rem;
+
+    color: #4E4958;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox-wrapper label {
+    font-weight: 400;
+    font-size:1.6rem;
+    line-height: 2.4rem;
+    color: #4E4958;
+}
+
+.input-wrapper label span {
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: #808080;
+}
+
+.input-wrapper label span:hover {
+
+}
+
+
+
+.input-wrapper input,
+.input-wrapper  textarea,
+.input-wrapper  select
+{
+    background: #FAFAFC;
+    border: 0.1rem solid #E6E6F0;
+    border-radius: 0.5rem;
+
+    height: 5.8rem;
+    padding:0 2.4rem;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+
+    color: #c1bccc;
+}
+
+
+
+.input-wrapper  textarea {
+    padding: 0;
+    height: 16.8rem;
+}
+
+.input-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%23cacaca' width='20px' height='20px' viewBox='0 0 32 32' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M0.256 8.606c0-0.269 0.106-0.544 0.313-0.75 0.412-0.412 1.087-0.412 1.5 0l14.119 14.119 13.913-13.912c0.413-0.412 1.087-0.412 1.5 0s0.413 1.088 0 1.5l-14.663 14.669c-0.413 0.413-1.088 0.413-1.5 0l-14.869-14.869c-0.213-0.213-0.313-0.481-0.313-0.756z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 24px top 50%;
+
+    cursor: pointer;
+}
+
+.col-3 {
+    display: flex;
+    gap: 2rem;
+}
+
+.col-3 > div:nth-child(1){
+    width: 100%;
+}
+
+.checkbox-wrapper {
+    position: relative;
+}
+
+.checkbox-wrapper label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0;
+}
+
+.checkbox-wrapper input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+
+    cursor: pointer;
+
+    opacity: 0;
+}
+
+.checkbox-wrapper label::before  {
+    content: '';
+    height: 24px;
+    width: 24px;
+    display: block;
+
+    border: 1px solid #E6E6F0;
+    border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='24px' height='24px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' stroke='%235889fa'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg id='Interface / Check'%3E%3Cpath id='Vector' d='M6 12L10.2426 16.2426L18.727 7.75732' stroke='%235889fa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+.checkbox-wrapper input:focus + label::before {
+    outline: 2px solid black;
+}
+
+
+footer {
+    background-color: #dadada;
+    height: 136px;
+
+    display: flex;
+    flex-direction: column;
+    
+    padding: 40px 64px;
+    margin-bottom: 100px;
+
+    border-top: 1px solid #b0b0b07d;
+    border-radius: 0 0 8px 8px;
+}
+
+footer .button {
+    height: 56px;
+    background: rgb(62, 0, 169);
+    border-radius: 8px;
+    border: none;
+
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 1s;
+    cursor: pointer;
+}
+
+footer .button:hover {
+    transition: 1s;
+    background: rgb(0, 140, 255);
+    
+}
+
+input:invalid {
+    border:2px solid #cb0000;
+}
